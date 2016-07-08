@@ -15,7 +15,7 @@
     index.html --> One-Pager
     profile.html --> Profilseite des Nutzers 
 
-./hidden --> Backend Entwicklung
+./django--> Backend Entwicklung
 
 Need $code
 
