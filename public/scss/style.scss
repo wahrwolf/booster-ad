@@ -1,10 +1,179 @@
 @import '_default.scss';
 
-header{
-    h1{
-        img{
+$fontcolor: #5f5e60;
+$backgroundColor: #eae8df;
+$backgroundInherit: #fff;
+$accentColor: #2196f3;
 
+$mainFont: 'Open Sans', sans-serif;
+
+body{
+    font-family: $mainFont;
+}
+
+.flexboxContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.container{
+    display: inline-block;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+header{
+    padding-top: 20px;
+    //border-bottom: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    overflow:hidden;
+    h1{
+        display: none;
+        margin-right: 20px;
+        float: left;
+        img{
+            height: 50px;
         }
     }
+    ul{
+        list-style: none;
+        //float: right;;
+        li{
+            padding: 10px 20px;
+            background-color:  $fontcolor;
+            float: left;
+            margin-right: 20px;
+            box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                color: white;
+                font-weight: 600;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
 
+main{
+    margin: 0 auto;
+    max-width: 960px;
+    #about{
+        @extend .flexboxContainer;
+        height: 100vh;
+        text-align: center;
+        .spin{
+            margin-top: 50px;
+        }
+        img{
+
+            height: 200px;
+            }
+        ul{
+            margin: 0 auto;
+            list-style: none;
+            position: relative;
+            li{
+                display: none;
+                h2{
+                    font-size: 3rem;
+                    color: #2196f3;
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(360deg); }
+    100% { -moz-transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+    0% {-webkit-transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); }
+}
+@-o-keyframes spin {
+    0% { -o-transform: rotate(360deg); }
+    100% { -o-transform: rotate(0deg); }
+}
+.spin {
+    border-radius: 50px 50px 50px 50px;
+    animation: spin 4s linear 0s infinite reverse;
+    -moz-animation: 4s linear 0s reverse none infinite spin;
+    -webkit-animation: spin 4s linear 0s infinite reverse;
+    -webkit-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.spin:hover {
+    -webkit-animation-play-state: running;
+    -o-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -webkit-animation-play-state: running;
+}
+.icon {
+    animation: spin 20s linear 2s infinite normal;
+    -moz-animation: 20s linear 2s normal none infinite spin;
+    -webkit-animation: spin 20s linear 2s infinite normal;
+    background: #eee;
+    border-radius: 100%;
+    position: relative;
+}
+
+.active{
+    display: block !important;
+}
+
+#app{
+    height: 100vh;
+    text-align: center;
+    h2{
+        font-size: 3rem;
+        color: $accentColor;
+    }
+    .card-preview{
+        display: inline-block;
+        box-sizing: border-box;
+        margin-right: 10%;
+        border: 1px solid black;
+        padding: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+        form{
+            overflow: hidden;
+
+        }
+        input{
+            display: block;
+            background-color: white;
+            box-shadow: none;
+            border: 1px solid black;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            &:hover{
+                background-color: $accentColor;
+                color: white;
+            }
+        }
+        .new-card-info{
+            display: none;
+        }
+    }
 }
