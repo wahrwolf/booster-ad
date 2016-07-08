@@ -10,7 +10,7 @@ class User(models.Model):
 		return self.fullName
 class Brand(models.Model):
 	name = models.CharField(max_length=200)
-	pathLogo = models.FilePathField(path="./logos/") #TODO: change to imagefield
+	pathLogo = models.FilePathField(path="/tmp/logos/") #TODO: change to imagefield
 	website = models.URLField(max_length=200)
 	description = models.CharField(max_length=200)
 
@@ -32,7 +32,7 @@ class Offer(models.Model):
 	description = models.CharField(max_length=200)
 	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
 	def __str__(self):
-		return (self.brand + ": " + self.description)
+		return (str(self.brand) + ": " + self.token)
 
 class Category(models.Model):
 	name = models.CharField(max_length=20)
@@ -49,7 +49,7 @@ class Tag(models.Model):
 	def __str__(self):
 		return self.name
 
-class UserPreference(models.Model):
+class UserTag(models.Model):
 	tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	accepted = models.IntegerField(default=0)
@@ -58,14 +58,14 @@ class UserPreference(models.Model):
 	def __str__(self):
 		return (self.tag.name + "@" + self.user.nick )
 
-class OfferTags(models.Model):
+class OfferTag(models.Model):
 	tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
 	offer = models.ForeignKey(Offer, on_delete=models.CASCADE)
 	
 	def __str__(self):
-		return (self.tag.name + "@" + self.offer.token +":"+self.offer.brand)
+		return (self.tag.name + "@" + self.offer.token +":"+str(self.offer.brand))
 
-class BrandTags(models.Model):
+class BrandTag(models.Model):
 	tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
 	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
 
