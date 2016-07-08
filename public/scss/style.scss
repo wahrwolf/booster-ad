@@ -147,20 +147,23 @@ main{
         font-size: 3rem;
         color: $accentColor;
     }
-    .card-preview{
+
+    .card-preview
+    {
         display: none;
         box-sizing: border-box;
-        margin-right: 10%;
-        border: 1px solid black;
         padding: 20px;
-        &:last-child{
-            margin-right: 0;
+        .container{
+            padding: 20px;
+            border: 1px solid black;
         }
         form{
             overflow: hidden;
 
         }
         input{
+            margin: 0 auto;
+            width: 120px;
             display: block;
             background-color: white;
             box-shadow: none;
@@ -191,6 +194,7 @@ main{
     }
 }
 
+
 // animation
 $spinkit-spinner-margin: 40px auto !default;
 $spinkit-size: 40px !default;
@@ -201,7 +205,16 @@ $spinkit-spinner-color: #5f5e60 !default;
   height: $spinkit-size;
   position: relative;
   margin: $spinkit-spinner-margin;
-
+  #eventTicker{
+      z-index: 9999;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
   .child {
     width: 100%;
     height: 100%;
