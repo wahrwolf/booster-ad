@@ -31,6 +31,8 @@ class Offer(models.Model):
 	token = models.CharField(max_length=200)
 	description = models.CharField(max_length=200)
 	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+	status = models.CharField(max_length=20, default="open")
+	correspondant = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, default="")
 	def __str__(self):
 		return (str(self.brand) + ": " + self.token)
 

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,12 +6,12 @@
         <title>BoostAd</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{% static 'offers/css/style.css' %}">
     </head>
     <body>
         <header>
             <div class="container">
-                <h1><a href="#"><img src="img/logo_boosterad.svg" alt="Logo" /></a></h1>
+                <h1><a href="#"><img src="{% static 'offers/img/logo_boosterad.svg' %}" alt="Logo" /></a></h1>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Profil</a></li>
@@ -20,7 +21,7 @@
         <main>
             <section id="about">
                 <div class="spin">
-                    <img class="icon" src="img/logo_boosterad.svg" alt="" />
+                    <img class="icon" src="{% static 'offers/img/logo_boosterad.svg' %}" alt="" />
                 </div>
                 <ul id="slideAnimation">
                     <li class="active">
@@ -60,6 +61,7 @@
                     <div class="child double-bounce2"></div>
                 </div>
                 <div class="card-preview">
+<<<<<<< HEAD:public/index.html
                     <div class="container">
                         <div class="card-header">
                             <form class="choose-profit" action="index.html" method="post">
@@ -77,6 +79,24 @@
                                     <a href="rabattseite.html">Your Discounts</a>
                                     <input id="return" type="button" name="returntoside" value="Return to page">
                                 </div>
+=======
+                    <div class="card-header">
+                        <form class="choose-profit" action="index.html" method="post">
+                            <!-- Erste Auswahl -->
+                            <input id="percent" type="button" name="percent" value="15%">
+                            <input id="discount" type="button" name="discount" value="345 Coins">
+                            <!-- neue Karte oder weitere Infos -->
+                            <div class="new-card-info">
+                                <input id="new-card" type="button" name="newCard" value="New Card">
+                                <input id="more-infos" type="button" name="moreInfos" value="More Information">
+                            </div>
+                            <!-- mehr information oder in der schleife eine neue karten -->
+                            <div class="moreInfos">
+                                <a href="{% static 'offers/coinShop.html' %}">Coinshop</a>
+                                <a href="{% static 'offers/rabattseite.html' %}">Your Discounts</a>
+                                <input id="return" type="button" name="returntoside" value="Return to page">
+                            </div>
+>>>>>>> master:booster_ad/offers/templates/offers/index.html
 
 
                             </form>
@@ -99,7 +119,7 @@
         <footer>
             FutureatAdHackathon
         </footer>
-        <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
-        <script type="text/javascript" src="js/headerSlide.js"></script>
+        <script type="text/javascript" src="{% static 'offers/js/jquery-3.0.0.js' %}"></script>
+        <script type="text/javascript" src="{% static 'offers/js/headerSlide.js' %}"></script>
     </body>
 </html>
