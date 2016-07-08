@@ -148,7 +148,7 @@ main{
         color: $accentColor;
     }
     .card-preview{
-        display: inline-block;
+        display: none;
         box-sizing: border-box;
         margin-right: 10%;
         border: 1px solid black;
@@ -172,8 +172,54 @@ main{
                 color: white;
             }
         }
-        .new-card-info{
+        a{
+            text-decoration: overline;
+            display: block;
+            background-color: white;
+            box-shadow: none;
+            border: 1px solid black;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            &:hover{
+                background-color: $accentColor;
+                color: white;
+            }
+        }
+        .new-card-info , .moreInfos{
             display: none;
         }
     }
+}
+
+// animation
+$spinkit-spinner-margin: 40px auto !default;
+$spinkit-size: 40px !default;
+$spinkit-spinner-color: #5f5e60 !default;
+
+.double-bounce {
+  width: $spinkit-size;
+  height: $spinkit-size;
+  position: relative;
+  margin: $spinkit-spinner-margin;
+
+  .child {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $spinkit-spinner-color;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: doubleBounce 2.0s infinite ease-in-out;
+  }
+
+  .double-bounce2 {
+    animation-delay: -1.0s;
+  }
+}
+
+@keyframes doubleBounce {
+  0%, 100% { transform: scale(0) }
+  50% { transform: scale(1.0) }
 }
