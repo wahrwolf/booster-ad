@@ -8,16 +8,6 @@ class User(models.Model):
 	fullName = models.CharField(max_length=200)
 	def __str__(self):
 		return self.fullName
-
-class Offer(models.Model):
-	coinValue = models.IntegerField(default = 100)
-	#token entspricht einem Gutscheincode für z.B. einen Online-Warenkorb ...
-	token = models.CharField(max_length=200)
-	description = models.CharField(max_length=200)
-	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
-	def __str__(self):
-		return (self.brand + ": " + self.description)
-
 class Brand(models.Model):
 	name = models.CharField(max_length=200)
 	pathLogo = models.FilePathField(path="./logos/") #TODO: change to imagefield
@@ -33,6 +23,16 @@ class Brand(models.Model):
 
 	def __str__(self):
 		return self.name
+
+
+class Offer(models.Model):
+	coinValue = models.IntegerField(default = 100)
+	#token entspricht einem Gutscheincode für z.B. einen Online-Warenkorb ...
+	token = models.CharField(max_length=200)
+	description = models.CharField(max_length=200)
+	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+	def __str__(self):
+		return (self.brand + ": " + self.description)
 
 class Category(models.Model):
 	name = models.CharField(max_length=20)
