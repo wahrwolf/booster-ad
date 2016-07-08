@@ -39,11 +39,12 @@ $(function(){
         var newCardInfo = $(".new-card-info");
         var moreInfos = $(".moreInfos");
         var returnPage = $("#return");
+        var bounceCircle = $(".double-bounce");
         // startbutton
         var initBtn = $("#eventTicker");
         initBtn.on("click touch", function(){
             cardPreview.show();
-            cardPreview.children().removeAttr('style');
+            bounceCircle.css({"display": "none"});
         });
         form.children("input").each(function(){
             $(this).on("click touch", function(){
