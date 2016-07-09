@@ -43,23 +43,21 @@ def populate(request):
 		entries.extend((tanja, tom))
 
 		#Brand
-		pike = Brand.objects.create(name="pike", pathLogo="ball.jpg", website = "www.pike.com", description = "Sport Stuff for Sport Spacs")
 		bringerando = Brand.objects.create(name="bringerando", pathLogo="pizza.jpg", website = "www.bringerando.de", description = "Essen wann du willst, wen du willst")
 		xlando = Brand.objects.create(name="xlando", pathLogo="shoe.jpg", website = "www.xlando.de", description = "Schrei vor Freude")
 		clizzard= Brand.objects.create(name="clizzard", pathLogo="controller.jpg", website = "www.clizzard.com", description = "Make Games great again!")
-		
-		entries.extend((pike, bringerando, xlando, clizzard))
+
+		entries.extend((bringerando, xlando, clizzard))
 
 
 		for i in entries:
 			i.save()
-		
+
 	#Offer
-		ball = Offer.objects.create(coinValue = 550, description = "Free Hokey-Mask", token = "z0diax", brand = pike )
 		shoes = Offer.objects.create(coinValue = 1400, description ="Get 3 for 2", token="3FORETw0", brand = xlando)
 		beta = Offer.objects.create(coinValue= 50, description = "Closed Beta-Access", token="UnderWatchBeta", brand =clizzard)
 		pizza = Offer.objects.create(coinValue=750, description="Get a free pizza", token ="freeP1zzA", brand = bringerando)
-		entries.extend((ball, shoes, beta, pizza))
+		entries.extend((shoes, beta, pizza))
 
 		return HttpResponse("<h1>Import done:</h1>")
 	else:
