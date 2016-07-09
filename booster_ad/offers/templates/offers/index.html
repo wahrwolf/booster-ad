@@ -45,11 +45,9 @@
                 <h2>Our Customers</h2>
                 <div class="card-container">
                     <ul>
-                        <li>Amazon</li>
-                        <li>HVV</li>
-                        <li>Was</li>
-                        <li>auch</li>
-                        <li>immer</li>
+                        {% for brand in brands%}
+                        <li> brand.name </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </section>
