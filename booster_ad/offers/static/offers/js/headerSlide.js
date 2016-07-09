@@ -6,8 +6,6 @@ $(function(){
 
     let container = $("#slideAnimation");
     let countFlag = 0;
-    container.each(function(){
-    });
     // APP
     //variables
     var form = $(".choose-profit");
@@ -85,9 +83,4 @@ $(function(){
     goodbyeContainer.on("click touch", function(){
         goodbyeContainer.css({"display": "none"});
     });
-
-
-
-
-
 });

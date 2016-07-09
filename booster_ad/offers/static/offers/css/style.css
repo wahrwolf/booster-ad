@@ -125,7 +125,7 @@ div.embed-responsive-16by9 {
 body {
   font-family: "Open Sans", sans-serif; }
 
-.flexboxContainer, main #about, #powered, .goodbye {
+.flexboxContainer, main #about, #customers, #customers .card-container ul li, #powered, .goodbye {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -235,9 +235,36 @@ main {
 .active {
   display: block !important; }
 
+#customers {
+  height: 100vh; }
+  #customers h2 {
+    font-weight: 100;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 50px; }
+  #customers .card-container {
+    width: 100%; }
+    #customers .card-container ul {
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: center; }
+      #customers .card-container ul li {
+        margin-left: 2%;
+        margin-bottom: 2%;
+        color: white;
+        width: 30%;
+        height: 200px;
+        float: left;
+        font-size: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.5); }
+        #customers .card-container ul li:hover {
+          background-color: black;
+          font-size: 3rem; }
+
 #app {
-  height: 100vh;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 300px; }
   #app h2 {
     font-size: 3rem;
     color: #2196f3; }
@@ -393,16 +420,18 @@ main {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none; }
+  display: none;
+  color: white;
+  font-weight: 100; }
+  .goodbye p {
+    font-size: 2.5rem;
+    margin-bottom: 10px; }
   .goodbye h4 {
     text-align: center;
-    font-size: 3rem;
-    color: white;
-    font-weight: 100;
-    margin-bottom: 10px; }
+    font-size: 3rem; }
   .goodbye small {
-    font-size: 2.5rem;
-    color: white; }
+    color: #2196f3;
+    font-size: 1.25rem; }
     .goodbye small span {
       font-weight: 500; }
 

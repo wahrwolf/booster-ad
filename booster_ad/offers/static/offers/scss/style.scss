@@ -138,9 +138,46 @@ main{
     display: block !important;
 }
 
-#app{
+#customers{
+    @extend .flexboxContainer;
     height: 100vh;
+    h2{
+        font-weight: 100;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .card-container{
+        width: 100%;
+        ul{
+            overflow: hidden;
+            margin: 0 auto;
+            text-align: center;
+            li{
+                @extend .flexboxContainer;
+                margin-left: 2%;
+                margin-bottom: 2%;
+                color: white;
+                width: 30%;
+                height: 200px;
+                float: left;
+                font-size: 1.5rem;
+                background-color: rgba(0,0,0,0.1);
+                box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.5);
+                &:hover{
+                    background-color: rgba(0,0,0,1);
+                    font-size: 3rem;
+                }
+            }
+        }
+
+    }
+}
+
+
+#app{
     text-align: center;
+    margin-bottom: 300px;
     h2{
         font-size: 3rem;
         color: $accentColor;
@@ -341,16 +378,19 @@ $spinkit-spinner-color: #5f5e60 !default;
     top: 0; left: 0; bottom: 0; right: 0;
     background-color: rgba(0,0,0,0.8);
     display: none;
+    color: white;
+    font-weight: 100;
+    p{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
     h4{
         text-align: center;
         font-size: 3rem;
-        color: white;
-        font-weight: 100;
-        margin-bottom: 10px;
     }
     small {
-        font-size: 2.5rem;
-        color: white;
+        color: $accentColor;
+        font-size: 1.25rem;
         span{
             font-weight: 500;
         }
