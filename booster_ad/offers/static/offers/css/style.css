@@ -183,12 +183,16 @@ main {
       list-style: none;
       position: relative; }
       main #about ul li {
+        margin-bottom: 50px;
         display: none; }
         main #about ul li h2 {
-          margin-bottom: 50px;
           font-size: 10rem;
           font-weight: 100;
           color: #2196f3; }
+        main #about ul li small {
+          font-size: 2rem;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.5); }
 
 @keyframes spin {
   0% {

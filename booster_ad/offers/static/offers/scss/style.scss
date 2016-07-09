@@ -83,12 +83,18 @@ main{
             list-style: none;
             position: relative;
             li{
+                margin-bottom: 50px;
                 display: none;
                 h2{
-                    margin-bottom: 50px;
+
                     font-size: 10rem;
                     font-weight: 100;
                     color: #2196f3;
+                }
+                small{
+                    font-size: 2rem;
+                    font-weight: 500;
+                    color: rgba(0,0,0,0.5);
                 }
             }
         }
