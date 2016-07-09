@@ -5,31 +5,12 @@ $(function(){
     // Funktion für HeaderSlider
 
     let container = $("#slideAnimation");
-    let firstchildren = $("#slideAnimation li:first");
     let countFlag = 0;
-    setInterval(function(){
-        container.children().removeClass('active');
-
-
-
-    },5000);
-
-
-    // Karten sind immer gleich groß
-    var form = $(".choose-profit");
-    // var count = 0;
-    // form.children().each(function(){
-    //     let test = $(this).outerWidth();
-    //     if(test > count){
-    //         count = test;
-    //     }
-    // });
-    // form.children().css({"width": count});
-    // $('input').css({"width": count});
-
-    // Events
-
+    container.each(function(){
+    });
+    // APP
     //variables
+    var form = $(".choose-profit");
     var cardPreview = $(".card-preview");
     //app childs
     var percentage = $("#percent");
@@ -57,7 +38,6 @@ $(function(){
                         newCardInfo.children().hide();
                         let that = $(this).attr("name");
                         if(that == "newCard"){
-                            $(document).css({"background-color": "white"});
                             window.location.reload();
                         }
                         if(that == "moreInfos"){
@@ -96,6 +76,17 @@ $(function(){
             });
         });
     }
+
+    // Timetosaygoodbye
+    var goodbyeContainer = $(".goodbye");
+    $("footer input").on("click touch", function(){
+        goodbyeContainer.css({"display": "flex"});
+    });
+    goodbyeContainer.on("click touch", function(){
+        goodbyeContainer.css({"display": "none"});
+    });
+
+
 
 
 

@@ -50,7 +50,7 @@ header{
         //float: right;;
         li{
             padding: 10px 20px;
-            background-color:  $fontcolor;
+            background-color:  $accentColor;
             float: left;
             margin-right: 20px;
             box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
@@ -74,11 +74,9 @@ main{
         height: 100vh;
         text-align: center;
         .spin{
-            margin-top: 50px;
         }
         img{
-
-            height: 200px;
+            height: 300px;
             }
         ul{
             margin: 0 auto;
@@ -290,5 +288,85 @@ $spinkit-spinner-color: #5f5e60 !default;
           height: 100%;
           font-size: 3rem;
         }
+    }
+}
+
+#powered{
+    height: 100vh;
+    @extend .flexboxContainer;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    h2{
+        font-weight: 100;
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 20px;
+        span{
+            font-weight: 500;
+        }
+    }
+
+    hr{
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    ul{
+        display: inline-block;
+        text-align: center;
+        list-style: none;
+        overflow: hidden;
+        margin: 0 auto;
+        li{
+            margin-right: 20px;
+            float: left;
+            &:last-child{
+                margin-right: 20px;
+            }
+            h4{
+                font-size: 1.5rem;
+            }
+            small{
+                font-size: 1.25rem;
+                color: rgba(0,0,0,0.5);
+            }
+        }
+    }
+}
+.goodbye{
+    @extend .flexboxContainer;
+    position: fixed;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    h4{
+        text-align: center;
+        font-size: 3rem;
+        color: white;
+        font-weight: 100;
+        margin-bottom: 10px;
+    }
+    small {
+        font-size: 2.5rem;
+        color: white;
+        span{
+            font-weight: 500;
+        }
+}
+}
+
+footer{
+
+    text-align: center;
+    margin: 0 auto;
+    input{
+        color: white;
+        margin: 0 0 50px 0;
+        padding: 20px 50px;
+        font-size: 2rem;
+        background-color: $accentColor;
+        border: none;
     }
 }

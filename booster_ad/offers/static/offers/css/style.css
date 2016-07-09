@@ -125,7 +125,7 @@ div.embed-responsive-16by9 {
 body {
   font-family: "Open Sans", sans-serif; }
 
-.flexboxContainer, main #about {
+.flexboxContainer, main #about, #powered, .goodbye {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -159,7 +159,7 @@ header {
     list-style: none; }
     header ul li {
       padding: 10px 20px;
-      background-color: #5f5e60;
+      background-color: #2196f3;
       float: left;
       margin-right: 20px;
       box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75); }
@@ -176,10 +176,8 @@ main {
   main #about {
     height: 100vh;
     text-align: center; }
-    main #about .spin {
-      margin-top: 50px; }
     main #about img {
-      height: 200px; }
+      height: 300px; }
     main #about ul {
       margin: 0 auto;
       list-style: none;
@@ -353,5 +351,70 @@ main {
       vertical-align: middle;
       height: 100%;
       font-size: 3rem; }
+
+#powered {
+  height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center; }
+  #powered h2 {
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 20px; }
+    #powered h2 span {
+      font-weight: 500; }
+  #powered hr {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+  #powered ul {
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    margin: 0 auto; }
+    #powered ul li {
+      margin-right: 20px;
+      float: left; }
+      #powered ul li:last-child {
+        margin-right: 20px; }
+      #powered ul li h4 {
+        font-size: 1.5rem; }
+      #powered ul li small {
+        font-size: 1.25rem;
+        color: rgba(0, 0, 0, 0.5); }
+
+.goodbye {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; }
+  .goodbye h4 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 10px; }
+  .goodbye small {
+    font-size: 2.5rem;
+    color: white; }
+    .goodbye small span {
+      font-weight: 500; }
+
+footer {
+  text-align: center;
+  margin: 0 auto; }
+  footer input {
+    color: white;
+    margin: 0 0 50px 0;
+    padding: 20px 50px;
+    font-size: 2rem;
+    background-color: #2196f3;
+    border: none; }
 
 /*# sourceMappingURL=style.css.map */
