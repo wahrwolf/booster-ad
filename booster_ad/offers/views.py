@@ -43,9 +43,9 @@ def populate(request):
 		entries.extend((tanja, tom))
 
 		#Brand
-		bringerando = Brand.objects.create(name="bringerando", pathLogo="pizza.jpg", website = "www.bringerando.de", description = "Essen wann du willst, wen du willst")
-		xlando = Brand.objects.create(name="xlando", pathLogo="shoe.jpg", website = "www.xlando.de", description = "Schrei vor Freude")
-		clizzard= Brand.objects.create(name="clizzard", pathLogo="controller.jpg", website = "www.clizzard.com", description = "Make Games great again!")
+		bringerando = Brand.objects.create(name="Bild", pathLogo="pizza.jpg", website = "www.bringerando.de", description = "aktuelle Nachrichten und Themen")
+		xlando = Brand.objects.create(name="Golem", pathLogo="shoe.jpg", website = "www.xlando.de", description = "IT-News für Profis")
+		clizzard= Brand.objects.create(name="Brigitte", pathLogo="controller.jpg", website = "www.clizzard.com", description = "Mode oder Beauty")
 
 		entries.extend((bringerando, xlando, clizzard))
 
