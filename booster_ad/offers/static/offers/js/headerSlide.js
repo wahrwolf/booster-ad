@@ -28,24 +28,24 @@ $(function(){
     // $('input').css({"width": count});
 
     // Events
+
+    //variables
+    var cardPreview = $(".card-preview");
+    //app childs
+    var percentage = $("#percent");
+    var discount = $("#discount");
+    var children = form.children();
+    var newCardInfo = $(".new-card-info");
+    var moreInfos = $(".moreInfos");
+    var returnPage = $("#return");
+    var bounceCircle = $(".double-bounce");
+    // startbutton
+    var initBtn = $("#eventTicker");
+    //blackcards
+    var blackCardsContainer = $(".black-cards");
+
     //app
     function app(){
-        var cardPreview = $(".card-preview");
-        //app childs
-
-        var percentage = $("#percent");
-        var discount = $("#discount");
-        var children = form.children();
-        var newCardInfo = $(".new-card-info");
-        var moreInfos = $(".moreInfos");
-        var returnPage = $("#return");
-        var bounceCircle = $(".double-bounce");
-        // startbutton
-        var initBtn = $("#eventTicker");
-        initBtn.on("click touch", function(){
-            cardPreview.show();
-            bounceCircle.css({"display": "none"});
-        });
         form.children("input").each(function(){
             $(this).on("click touch", function(){
                 children.hide();
@@ -57,10 +57,8 @@ $(function(){
                         newCardInfo.children().hide();
                         let that = $(this).attr("name");
                         if(that == "newCard"){
-                            // wenn new card geklickt wurde
-                                initBtn.on("click touch", function(){
-                                    cardPreview.show();
-                                });
+                            $(document).css({"background-color": "white"});
+                            window.location.reload();
                         }
                         if(that == "moreInfos"){
                             // wenn auf more infos geklickt wurde
@@ -82,8 +80,23 @@ $(function(){
         });
 
     }
+    // click on the circlebtn
+    initBtn.on("click touch", function(){
+        bounceCircle.css({"display": "none"});
+        renderBlackcard();
+    });
+    // render  blackcards + animate/hide
+    function renderBlackcard(){
+        blackCardsContainer.show();
+        blackCardsContainer.children().each(function(){
+            $(this).on("click touch", function(){
+                blackCardsContainer.hide();
+                cardPreview.show();
+                app();
+            });
+        });
+    }
 
-    app();
 
 
 });
