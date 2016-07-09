@@ -151,11 +151,21 @@ main{
     .card-preview
     {
         display: none;
-        box-sizing: border-box;
-        padding: 20px;
-        .container{
+        .card-header, .card-main{
             padding: 20px;
-            border: 1px solid black;
+        }
+        .card-main img{
+            width: 100px;
+        }
+        .card-header{
+            background-color: #bdc3c7;
+        }
+        h3{
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+        }
+        .container{
+            box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
         }
         form{
             overflow: hidden;
@@ -163,21 +173,27 @@ main{
         }
         input{
             margin: 0 auto;
-            width: 120px;
+            width: 300px;
+            font-size: 1.5rem;
             display: block;
             background-color: white;
             box-shadow: none;
-            border: 1px solid black;
             padding: 10px 20px;
             margin-bottom: 20px;
+            border: 0;
+            box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.75);
             &:hover{
-                background-color: $accentColor;
+                background-color: rgba(0,0,0,0.5);
                 color: white;
             }
+        }
+        input:last-child{
+            margin-bottom: 0;
         }
         a{
             text-decoration: overline;
             display: block;
+            font-size: 1.5rem;
             background-color: white;
             box-shadow: none;
             border: 1px solid black;
@@ -235,4 +251,44 @@ $spinkit-spinner-color: #5f5e60 !default;
 @keyframes doubleBounce {
   0%, 100% { transform: scale(0) }
   50% { transform: scale(1.0) }
+}
+
+// Blackbox
+.black-cards{
+    display: none;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    .card{
+        display: inline-block;
+        width: 150px;
+        height: 200px;
+        margin-right: 10%;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.75);
+        cursor: pointer;
+        &:last-child{
+            margin-right: 0;
+        }
+        &:hover{
+            background-color: rgba(0,0,0,1);
+        }
+        span{
+            display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          vertical-align: middle;
+          height: 100%;
+          font-size: 3rem;
+        }
+    }
 }

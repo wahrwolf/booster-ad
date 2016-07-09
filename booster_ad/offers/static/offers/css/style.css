@@ -244,29 +244,40 @@ main {
     font-size: 3rem;
     color: #2196f3; }
   #app .card-preview {
-    display: none;
-    box-sizing: border-box;
-    padding: 20px; }
+    display: none; }
+    #app .card-preview .card-header, #app .card-preview .card-main {
+      padding: 20px; }
+    #app .card-preview .card-main img {
+      width: 100px; }
+    #app .card-preview .card-header {
+      background-color: #bdc3c7; }
+    #app .card-preview h3 {
+      font-size: 1.5rem;
+      margin-bottom: 50px; }
     #app .card-preview .container {
-      padding: 20px;
-      border: 1px solid black; }
+      box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75); }
     #app .card-preview form {
       overflow: hidden; }
     #app .card-preview input {
       margin: 0 auto;
-      width: 120px;
+      width: 300px;
+      font-size: 1.5rem;
       display: block;
       background-color: white;
       box-shadow: none;
-      border: 1px solid black;
       padding: 10px 20px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      border: 0;
+      box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.75); }
       #app .card-preview input:hover {
-        background-color: #2196f3;
+        background-color: rgba(0, 0, 0, 0.5);
         color: white; }
+    #app .card-preview input:last-child {
+      margin-bottom: 0; }
     #app .card-preview a {
       text-decoration: overline;
       display: block;
+      font-size: 1.5rem;
       background-color: white;
       box-shadow: none;
       border: 1px solid black;
@@ -310,5 +321,37 @@ main {
     transform: scale(0); }
   50% {
     transform: scale(1); } }
+.black-cards {
+  display: none;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center; }
+  .black-cards h3 {
+    font-size: 2rem;
+    margin-bottom: 50px; }
+  .black-cards .card {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    margin-right: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer; }
+    .black-cards .card:last-child {
+      margin-right: 0; }
+    .black-cards .card:hover {
+      background-color: black; }
+    .black-cards .card span {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      vertical-align: middle;
+      height: 100%;
+      font-size: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
