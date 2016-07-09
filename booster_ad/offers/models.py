@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
+	DEFAULT_PK=-1
 	coins = models.IntegerField(default=0)
 	nick = models.CharField(max_length=200)
 	fullName = models.CharField(max_length=200)
@@ -32,7 +33,7 @@ class Offer(models.Model):
 	description = models.CharField(max_length=200)
 	brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
 	status = models.CharField(max_length=20, default="open")
-	correspondant = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, default="")
+	correspondant = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, default=User.DEFAULT_PK)
 	def __str__(self):
 		return (str(self.brand) + ": " + self.token)
 
