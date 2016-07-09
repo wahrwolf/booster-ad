@@ -83,4 +83,10 @@ $(function(){
     goodbyeContainer.on("click touch", function(){
         goodbyeContainer.css({"display": "none"});
     });
+
+    var customerContainer = $(".card-container ul").children();
+    var small = $(".card-container small");
+    customerContainer.hover(function(){
+        $(this).children("small").css({"display": "block"});
+    });
 });

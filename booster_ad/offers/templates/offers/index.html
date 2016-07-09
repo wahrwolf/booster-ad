@@ -46,7 +46,13 @@
                 <div class="card-container">
                     <ul>
                         {% for brand in brands%}
-                        <li> {{brand.name}} </li>
+                        <li>
+                            <p>
+                                {{brand.name}} 
+                            </p>
+                            <small>{{brand.description}}</small>
+                        </li>
+
                         {% endfor %}
                     </ul>
                 </div>

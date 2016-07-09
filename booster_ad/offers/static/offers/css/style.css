@@ -250,6 +250,7 @@ main {
       margin: 0 auto;
       text-align: center; }
       #customers .card-container ul li {
+        text-transform: uppercase;
         margin-left: 2%;
         margin-bottom: 2%;
         color: black;

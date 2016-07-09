@@ -155,6 +155,7 @@ main{
             margin: 0 auto;
             text-align: center;
             li{
+                text-transform: uppercase;
                 @extend .flexboxContainer;
                 margin-left: 2%;
                 margin-bottom: 2%;
