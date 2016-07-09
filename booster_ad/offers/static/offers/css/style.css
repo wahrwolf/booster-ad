@@ -185,6 +185,7 @@ main {
       main #about ul li {
         display: none; }
         main #about ul li h2 {
+          margin-bottom: 50px;
           font-size: 3rem;
           color: #2196f3; }
 
@@ -251,7 +252,7 @@ main {
       #customers .card-container ul li {
         margin-left: 2%;
         margin-bottom: 2%;
-        color: white;
+        color: black;
         width: 30%;
         height: 200px;
         float: left;
@@ -260,7 +261,8 @@ main {
         box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.5); }
         #customers .card-container ul li:hover {
           background-color: black;
-          font-size: 3rem; }
+          font-size: 3rem;
+          color: white; }
 
 #app {
   text-align: center;
@@ -362,7 +364,7 @@ main {
     width: 150px;
     height: 200px;
     margin-right: 10%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer; }
