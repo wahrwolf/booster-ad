@@ -13,7 +13,9 @@ from .models import *
 # Create your views here.
 
 def index(request):
-	return render(request, 'offers/index.html',{})
+	brands = Brand.objects.all()
+
+	return render(request, 'offers/index.html',{'brands' : brands})
 
 def profile(request, userId):
 	user = get_object_or_404(User, pk=userId)
