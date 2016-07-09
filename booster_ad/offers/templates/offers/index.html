@@ -12,10 +12,6 @@
         <header>
             <div class="container">
                 <h1><a href="#"><img src="{% static 'offers/img/logo_boosterad.svg' %}" alt="Logo" /></a></h1>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="{% url 'offers:profile' 1 %}">Profil</a></li>
-                </ul>
             </div>
         </header>
         <main>
@@ -48,7 +44,7 @@
                         {% for brand in brands%}
                         <li>
                             <p>
-                                {{brand.name}} 
+                                {{brand.name}}
                             </p>
                             <small>{{brand.description}}</small>
                         </li>
@@ -109,7 +105,7 @@
                 </div>
             </section>
             <section id="powered">
-                <h2>Awesome work done by #<span>tOxicwOlvez</span></h2>
+                <h2>Awesome work done by #<span>toxicwolves</span></h2>
                 <hr>
                 <ul>
                     <li>
@@ -122,7 +118,7 @@
                     </li>
                     <li>
                         <h4>Philipp Klemmer</h4>
-                        <small>Webdeveloper</small>
+                        <small>Developer</small>
                     </li>
                 </ul>
             </section>
