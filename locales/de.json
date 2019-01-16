@@ -1,5 +1,6 @@
 {
   "demo": {
     "title": "Hello world"
-    }
+  },
+  "greeter": "Hallo Welt!"
 }
