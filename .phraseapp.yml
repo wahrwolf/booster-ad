@@ -7,6 +7,6 @@ phraseapp:
         file_format: nested_json
   push:
     sources:
-    - file:
+    - file: locales/<locale_name>.json
       params:
         file_format: nested_json
