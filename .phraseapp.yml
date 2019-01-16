@@ -1,5 +1,6 @@
 ---
 phraseapp:
+  project_id: b5faeed36d2dea17abd051208b72ac78
   pull:
     targets:
     - file: locales/<locale_name>.json
