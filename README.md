@@ -7,6 +7,7 @@
 #Projektstruktur
 ---
 
+```
 ./public --> Frontend Entwicklung findet hier statt
     ./css --> Stylesheet
     ./img --> Bolder und Grafiken
@@ -16,6 +17,7 @@
     profile.html --> Profilseite des Nutzers 
 
 ./django--> Backend Entwicklung
+```
 
 Need $code
 
